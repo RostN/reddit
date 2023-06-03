@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".subreddit.SubredditFragment">
+
+    <!--Обводка строки поиска-->
+    <ImageView
+        android:id="@+id/contourSearchLine"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/subreddit_search_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--Строка поиска-->
+    <EditText
+        android:id="@+id/searchLine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:background="@null"
+        android:drawableStart="@drawable/icon_search"
+        android:hint="@string/subreddit_search_line_hint"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@id/contourSearchLine"
+        app:layout_constraintEnd_toEndOf="@id/contourSearchLine"
+        app:layout_constraintStart_toStartOf="@id/contourSearchLine"
+        app:layout_constraintTop_toTopOf="@id/contourSearchLine" />
+
+    <!--Управление видимостью экрана поиска-->
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/searchControl"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="recycler,searchBackground,closeSearch,textView" />
+
+    <!--Закрыть окно поиска-->
+    <!--подложка кнопки-->
+    <ImageView
+        android:id="@+id/closeSearch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/subreddit_simple_background"
+        android:backgroundTint="@color/custom_color_text_secondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contourSearchLine" />
+
+    <!--Текст кнопки закрыть-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/search_line_close_btn"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/closeSearch"
+        app:layout_constraintEnd_toEndOf="@id/closeSearch"
+        app:layout_constraintStart_toStartOf="@id/closeSearch"
+        app:layout_constraintTop_toBottomOf="@id/searchBackground" />
+
+    <!--Подложка результата поиска-->
+    <ImageView
+        android:id="@+id/searchBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="30dp"
+        app:backgroundTint="@color/main_background_app"
+        android:background="@drawable/subreddit_simple_background"
+        app:layout_constraintBottom_toBottomOf="@id/closeSearch"
+        app:layout_constraintEnd_toEndOf="@id/closeSearch"
+        app:layout_constraintStart_toStartOf="@id/closeSearch"
+        app:layout_constraintTop_toTopOf="@id/closeSearch" />
+
+    <!--Ресайклер-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="6dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="@id/searchBackground"
+        app:layout_constraintEnd_toEndOf="@id/searchBackground"
+        app:layout_constraintStart_toStartOf="@id/searchBackground"
+        app:layout_constraintTop_toTopOf="@id/searchBackground" />
+
+    <!--Управление видимостью табов и его страниц-->
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/tabsControl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tabLayout,viewPager" />
+    <!--Табы-->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_background_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contourSearchLine"
+        app:tabMode="auto">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subreddit_tab_new" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subreddit_tab_popular" />
+
+    </com.google.android.material.tabs.TabLayout>
+    <!--Вложенные лайауты-->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

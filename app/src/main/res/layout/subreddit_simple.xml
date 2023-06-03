@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="5dp"
+    android:background="@drawable/subreddit_simple_background">
+
+    <!--Заголовок-->
+    <TextView
+        android:id="@+id/subredditTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="35dp"
+        android:text=""
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--Подписаться-->
+    <ImageView
+        android:id="@+id/subscribeBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icon_subscribe"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/subredditTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/subredditTitle"
+        app:tint="#a890e7" />
+    <!--Управление видимостью содержимого-->
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/contentControl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="redditText,subredditImage,subscribers"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="6dp" />
+    <!--Подписано-->
+    <ImageView
+        android:id="@+id/subscribedBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icon_subscribed"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/subredditTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/subredditTitle"
+        app:tint="#f5b0ad" />
+    <!--Описание-->
+    <TextView
+        android:id="@+id/redditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="7dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@id/subscribers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/subredditImage"
+        app:layout_constraintTop_toBottomOf="@id/subredditTitle"
+        app:layout_constraintVertical_bias="0" />
+    <!--Картинка поста-->
+    <ImageView
+        android:id="@+id/subredditImage"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:maxWidth="80dp"
+        android:adjustViewBounds="true"
+        app:flow_firstHorizontalBias="0"
+        app:layout_constraintBottom_toTopOf="@id/subscribers"
+        app:layout_constraintEnd_toStartOf="@id/redditText"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subredditTitle" />
+    <!--Количество подписчиков-->
+    <TextView
+        android:id="@+id/subscribers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

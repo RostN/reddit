@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".account.AccountFragment">
+
+    <!--Подложка-->
+    <ImageView
+        android:id="@+id/accountBackground"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginHorizontal="40dp"
+        android:background="@drawable/subreddit_simple_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".25" />
+
+    <!--Кнопка выйти-->
+    <Button
+        android:id="@+id/exitBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:background="@drawable/login_btn"
+        android:text="@string/exit_btn"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:backgroundTint="#ec615b"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clearBtn" />
+
+    <!--Кнопка очистить сохраненные-->
+    <Button
+        android:id="@+id/clearBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:background="@drawable/login_btn"
+        android:text="@string/clear_btn"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:backgroundTint="@color/main_app_color"
+        app:layout_constraintBottom_toTopOf="@id/exitBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/accountBackground" />
+
+    <!--Аватарка-->
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="@id/accountBackground"
+        app:layout_constraintEnd_toEndOf="@id/accountBackground"
+        app:layout_constraintStart_toStartOf="@id/accountBackground"
+        app:layout_constraintTop_toTopOf="@id/accountBackground"
+        app:layout_constraintVertical_bias="0" />
+
+    <!--Имя автора-->
+    <TextView
+        android:id="@+id/FullName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/accountBackground"
+        app:layout_constraintEnd_toEndOf="@id/accountBackground"
+        app:layout_constraintStart_toStartOf="@id/accountBackground"
+        app:layout_constraintTop_toTopOf="@id/accountBackground" />
+    <!--Никнейм-->
+    <TextView
+        android:id="@+id/nickname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/accountBackground"
+        app:layout_constraintEnd_toEndOf="@id/accountBackground"
+        app:layout_constraintStart_toStartOf="@id/accountBackground"
+        app:layout_constraintTop_toBottomOf="@id/FullName"
+        app:layout_constraintVertical_bias="0" />
+
+    <!--Карма-->
+    <TextView
+        android:id="@+id/karma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/subscribers"
+        app:layout_constraintEnd_toEndOf="@id/accountBackground"
+        app:layout_constraintStart_toStartOf="@id/accountBackground"
+        app:layout_constraintTop_toBottomOf="@id/nickname" />
+
+    <!--Количество подписчиков-->
+    <TextView
+        android:id="@+id/subscribers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/created"
+        app:layout_constraintEnd_toEndOf="@id/accountBackground"
+        app:layout_constraintStart_toStartOf="@id/accountBackground"
+        app:layout_constraintTop_toBottomOf="@id/karma" />
+
+    <!--Дата присоединения-->
+    <TextView
+        android:id="@+id/created"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/accountBackground"
+        app:layout_constraintEnd_toEndOf="@id/accountBackground"
+        app:layout_constraintStart_toStartOf="@id/accountBackground"
+        app:layout_constraintTop_toBottomOf="@id/subscribers" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

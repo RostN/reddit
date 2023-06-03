@@ -1,0 +1,64 @@
+<resources>
+    <!--App name-->
+    <string name="app_name">Final attestation SkillBox</string>
+
+    <!--Text stubs-->
+    <string name="time_pattern">yyyy/MM/dd</string>
+    <string name="subreddit_adapter_text_nodata">There is no data to display, or it has not been received yet</string>
+
+    <!--Navigation titles, hidden-->
+    <string name="title_subreddit">Sabreddits</string>
+    <string name="title_favorite">Favoriteы</string>
+    <string name="title_account">Account</string>
+
+    <!--Onboard texts-->
+    <!--Onboard title-->
+    <string name="title_onboard_one">Welcome to Humblr</string>
+    <string name="title_onboard_two">SubHumblr</string>
+    <string name="title_onboard_three">Share and save</string>
+
+    <!--Onboard description-->
+    <string name="description_onboard_one">Here are communities of all kinds of interests </string>
+    <string name="description_onboard_two">You can find new subs by interests and see the subs you subscribe to </string>
+    <string name="description_onboard_three">Favorites tab stores bookmarks with comments and subs. In the profile you will find information about yourself</string>
+    <string name="text_skip">Skip</string>
+
+    <!--Authentication-->
+    <string name="loginBtn">Login</string>
+    <string name="login_name"><b>Humblr</b></string>
+    <string name="auth_canceled">Authentication failed</string>
+    <string name="logo_description">Find like-minded people with Humblr</string>
+
+    <!--Sabreddit-->
+    <string name="subreddit_search_line_hint">Search</string>
+    <string name="subreddit_search_line_hint_2">Press "Enter" to start searching</string>
+    <string name="subreddit_search_line_hint_result">Search result:\u0020</string>
+    <string name="subreddit_count_subscribers">Joined</string>
+    <string name="subreddit_author">Author:</string>
+    <string name="subreddit_details_shareBtn"><u>Share</u>\u0020</string>
+    <string name="subreddit_details_share_text">Share via:</string>
+    <string name="search_line_close_btn">Close search</string>
+
+    <!--About user-->
+    <string name="users_indo_subscribed">Unsubscribe</string>
+    <string name="users_indo_subscribe">Subscribe</string>
+    <string name="users_info_karma">Karma:</string>
+    <string name="users_info_subscribers">Followers:</string>
+    <string name="users_info_created">Cake day:</string>
+    <string name="users_info_banned">This user has blocked you</string>
+
+    <!--Tabs name-->
+    <string name="subreddit_tab_new">New</string>
+    <string name="subreddit_tab_popular">Popular</string>
+    <string name="favorite_tab_subreddit">Subreddit\u0020</string>
+    <string name="favorite_tab_comment">Comments\u0020</string>
+    <string name="favorite_tab_all">All\u0020</string>
+    <string name="favorite_tab_saved">Saved\u0020</string>
+
+    <!--Account-->
+    <string name="exit_btn">Logout</string>
+    <string name="clear_btn">Clear saved</string>
+    <string name="clear_btn_done">Save list cleared</string>
+    <string name="clear_btn_no_data">You do nоt have saves</string>
+
+</resources>

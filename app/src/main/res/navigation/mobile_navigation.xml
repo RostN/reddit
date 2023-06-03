@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.finalattestation.subreddit.SubredditFragment"
+        android:label="@string/title_subreddit"
+        tools:layout="@layout/fragment_subreddit" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.finalattestation.favorite.FavoriteFragment"
+        android:label="@string/title_favorite"
+        tools:layout="@layout/fragment_favorite" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.finalattestation.account.AccountFragment"
+        android:label="@string/title_account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/subredditDetails"
+        android:name="com.example.finalattestation.subreddit.SubredditDetails"
+        android:label="fragment_subreddit_details"
+        tools:layout="@layout/fragment_subreddit_details" />
+    <fragment
+        android:id="@+id/userInfoFragment"
+        android:name="com.example.finalattestation.account.UserInfoFragment"
+        android:label="fragment_user_info"
+        tools:layout="@layout/fragment_user_info" />
+    <fragment
+        android:id="@+id/subredditDetailPost"
+        android:name="com.example.finalattestation.subreddit.SubredditDetailPost"
+        android:label="fragment_subreddit_detail_post"
+        tools:layout="@layout/fragment_subreddit_detail_post" />
+</navigation>

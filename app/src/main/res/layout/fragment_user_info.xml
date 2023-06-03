@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".account.UserInfoFragment">
+
+    <!--Подложка-->
+    <ImageView
+        android:id="@+id/backgroundForm"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:src="@drawable/subreddit_simple_background"
+        app:layout_constraintBottom_toBottomOf="@id/bottomBorder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Аватарка-->
+    <ImageView
+        android:id="@+id/userAvatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="@id/backgroundForm"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/backgroundForm"
+        app:layout_constraintTop_toTopOf="@id/backgroundForm" />
+
+    <!--Имя автора, может быть пустым-->
+    <TextView
+        android:id="@+id/userTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/userName"
+        app:layout_constraintEnd_toEndOf="@id/backgroundForm"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/userAvatar"
+        app:layout_constraintTop_toTopOf="@id/userAvatar" />
+
+    <!--Никнейм-->
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/userKarma"
+        app:layout_constraintEnd_toEndOf="@id/backgroundForm"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/userAvatar"
+        app:layout_constraintTop_toBottomOf="@id/userTitle" />
+
+    <!--Карма автора-->
+    <TextView
+        android:id="@+id/userKarma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/userSubscribers"
+        app:layout_constraintEnd_toEndOf="@id/backgroundForm"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/userAvatar"
+        app:layout_constraintTop_toBottomOf="@id/userName" />
+
+    <!--Количество подписчиков-->
+    <TextView
+        android:id="@+id/userSubscribers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/userCreated"
+        app:layout_constraintEnd_toEndOf="@id/backgroundForm"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/userAvatar"
+        app:layout_constraintTop_toBottomOf="@id/userKarma" />
+
+    <!--Дата присоединения-->
+    <TextView
+        android:id="@+id/userCreated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/userAvatar"
+        app:layout_constraintEnd_toEndOf="@id/backgroundForm"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/userAvatar"
+        app:layout_constraintTop_toBottomOf="@id/userSubscribers" />
+
+    <!--Нижняя граница-->
+    <View
+        android:id="@+id/bottomBorder"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userAvatar" />
+
+    <!--Кнопка подписки/отписки-->
+    <Button
+        android:id="@+id/subOrUnsubBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/login_btn"
+        android:drawableStart="@drawable/icon_subscribe"
+        android:drawableTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bottomBorder" />
+
+    <!--Иконка подписки-->
+    <ImageView
+        android:id="@+id/buttonIcon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="10dp"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/subOrUnsubBtn"
+        app:layout_constraintEnd_toStartOf="@id/textMover"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="@id/subOrUnsubBtn"
+        app:layout_constraintTop_toTopOf="@id/subOrUnsubBtn"
+        app:tint="@color/white" />
+
+    <!--Сдвижение для картинки-->
+    <TextView
+        android:id="@+id/textMover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/subOrUnsubBtn"
+        app:layout_constraintEnd_toEndOf="@id/subOrUnsubBtn"
+        app:layout_constraintStart_toStartOf="@id/subOrUnsubBtn"
+        app:layout_constraintTop_toTopOf="@id/subOrUnsubBtn" />
+
+    <!--Ресайклер-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subOrUnsubBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

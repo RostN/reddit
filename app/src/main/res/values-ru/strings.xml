@@ -1,0 +1,64 @@
+<resources>
+    <!--Название приложеия-->
+    <string name="app_name">Final attestation SkillBox</string>
+
+    <!--Текстовые заглушки-->
+    <string name="time_pattern">dd.MM.yyyy</string>
+    <string name="subreddit_adapter_text_nodata">Нет данных для отображения, либо они ещё не получены</string>
+
+    <!--Название разделов кнопок навигации, их не видно-->
+    <string name="title_subreddit">Сабреддиты</string>
+    <string name="title_favorite">Избранное</string>
+    <string name="title_account">Профиль</string>
+
+    <!--Текст онбординга-->
+    <!--Заголовки онбординга-->
+    <string name="title_onboard_one">Добро пожаловать в Humblr</string>
+    <string name="title_onboard_two">SubHumblr</string>
+    <string name="title_onboard_three">Делись и сохраняй</string>
+
+    <!--Описание онбординга-->
+    <string name="description_onboard_one">Здесь собраны сообщества по всевозможным интересам </string>
+    <string name="description_onboard_two">Ты можешь найти новые сабы по интересам и посмотреть сабы, на которые подписан </string>
+    <string name="description_onboard_three">Вкладка избранное хранит закладки с комментариями и сабами. В профиле ты найдёшь информацию о себе </string>
+    <string name="text_skip">Пропустить</string>
+
+    <!--Аутентификация-->
+    <string name="loginBtn">Войти</string>
+    <string name="login_name"><b>Humblr</b></string>
+    <string name="auth_canceled">Аутентификация не выполнена</string>
+    <string name="logo_description">Найди единомышленников с Humblr</string>
+
+    <!--Сабреддиты-->
+    <string name="subreddit_search_line_hint">Поиск</string>
+    <string name="subreddit_search_line_hint_2">Нажмите "Enter" для начала поиска</string>
+    <string name="subreddit_search_line_hint_result">Результат поиска:\u0020</string>
+    <string name="subreddit_count_subscribers">Присоединившихся</string>
+    <string name="subreddit_author">Автор:</string>
+    <string name="subreddit_details_shareBtn"><u>Поделиться</u>\u0020</string>
+    <string name="subreddit_details_share_text">Поделиться через:</string>
+    <string name="search_line_close_btn">Закрыть строку поиска</string>
+
+    <!--Информация о пользователях-->
+    <string name="users_indo_subscribed">Отписаться</string>
+    <string name="users_indo_subscribe">Подписаться</string>
+    <string name="users_info_karma">Карма:</string>
+    <string name="users_info_subscribers">Подписчиков:</string>
+    <string name="users_info_created">Дата присоединения:</string>
+    <string name="users_info_banned">Вы заблокированны данным пользователем</string>
+
+    <!--Названия табов-->
+    <string name="subreddit_tab_new">Новое</string>
+    <string name="subreddit_tab_popular">Популярное</string>
+    <string name="favorite_tab_subreddit">Сабреддиты\u0020</string>
+    <string name="favorite_tab_comment">Комментарии\u0020</string>
+    <string name="favorite_tab_all">Все\u0020</string>
+    <string name="favorite_tab_saved">Сохраненные\u0020</string>
+
+    <!--Аккаунт-->
+    <string name="exit_btn">Выйти</string>
+    <string name="clear_btn">Очистить сохраненные</string>
+    <string name="clear_btn_done">Список сохраний очищен</string>
+    <string name="clear_btn_no_data">У вас отсутствуют сохранения</string>
+
+</resources>
